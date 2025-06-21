@@ -1,0 +1,129 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px;
+
+   
+}
+
+.navbar a{
+    text-decoration: none;
+    margin: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar a:hover{
+   
+    color: #c62828;
+  
+}
+.gecis{
+    display: flex;
+    align-items: center;
+}
+.gecis a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 3px;
+
+}
+.gecis a:hover{
+    color:blue;
+}
+
+.gecis p{
+    color: #c62828;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.navbar2{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+.navbar2 img{
+    height: 60px;
+    
+}
+
+.fa-instagram{
+    font-size: 30px;
+    margin: 5px;
+}
+.fa-facebook{
+    font-size: 30px;
+    margin: 5px;
+}
+
+.fa-square-x-twitter{
+    font-size: 30px;
+    margin: 5px;
+}
+
+.banner{
+    width: 90%;
+   display: flex;
+   justify-content: flex-start;
+   align-items:start;
+   position: relative;
+  
+   
+}
+.banner p{
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left: 10px;
+    line-height: 26px;
+ 
+}
+
+.banner span{
+    color: #c62828;
+}
+
+.hazirlama h1{
+    color: #c62828;
+}
+.hazirlama li{
+    font-size: 18px; /* Dilediğin boyuta göre ayarlayabilirsin */
+}
+.footer{
+display: flex;
+justify-content:space-around;
+margin-top: 30px;
+background-color: #E59A26;
+
+}
+.footer .socialMedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .socialMedia a{
+    margin: 10px;
+}
+.footer p{
+    font-size: 28px;
+   
+}
+
+.footer a{
+    font-size: 30px;
+}
+
+

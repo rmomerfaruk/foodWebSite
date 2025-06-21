@@ -1,0 +1,68 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px;
+
+   
+}
+
+.navbar a{
+    text-decoration: none;
+    margin: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar a:hover{
+   
+    color: #c62828;
+  
+}
+
+.gecis{
+display: flex;
+align-items: center;
+margin-top: 20px;
+
+}
+
+.gecis a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 19px;
+    margin: 2px;
+}
+.gecis a:hover{
+    color:blue;
+}
+
+.gecis p{
+    color: #c62828;
+    font-weight: 400;
+    font-size: 19px;
+    margin: 2px;
+}
+
+.banner{
+    margin-top: 20px;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+.banner p{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+   
+}
+
+.banner .anayemekP{
+    font-weight: 400;
+    font-size: 26px;
+    color: #c62828;
+}

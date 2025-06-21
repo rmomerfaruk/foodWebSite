@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+   .slider-container {
+      width: 60%;
+      max-width: 600px;
+      margin: 50px auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      background-color: #fff;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .nav-buttons button {
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+
+    .nav-buttons button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    /*  yazarlar icin slider*/
+      .yazarlar-slider-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+.yazarlar-slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .yazar-slide {
+    min-width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .yazar-slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .yazar-slide p {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .yazar-nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .yazar-nav-buttons button {
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+
+  .yazar-nav-buttons button:hover {
+    background-color: rgba(0,0,0,0.6);
+  }
+
+    
+    </style>
+     
+</head>
+
+<body>
+    
+  
+
+    <div class="container">
+       <?php
+        include "includes/header.php";
+        ?>
+        
+
+        <div class="banner">
+
+            <div class="img">
+                <img src="image/banner.avif" alt="">
+            </div>
+            <div class="banneryazilar">
+                <div>
+                    <p>Ne Pişirmek İstersin?</p>
+                </div>
+                <div class="bannera">
+                    <a href="">Kıymalı yemekler</a>
+                    <a href="">Patlıcan yemekleri</a>
+                    <a href="">Bugün Ne Pişirsem?</a>
+                    <a href="">Tatlı Tarifleri</a>
+                    <a href="">Kolay Kurabiye Tarifleri</a>
+                    <a href="">Çalışanlar İçin Pratik Yemekler</a>
+
+
+                </div>
+
+
+            </div>
+            <div class="arama-kutusu">
+                <input type="text" placeholder="Bir şey ara...">
+                <button>Ara</button>
+            </div>
+        </div>
+           
+       <h1 style="color: #c62828; text-align: center;" >Resme Tıkla Tarife Ulaş!</h1>
+           
+     
+      <div class="slider-container">
+  <div class="slider-track" id="sliderTrack">
+    <div class="slide">
+      <a href="indexKahvaltılıkCorek.php"><img src="image/indexLezzetTrendleri/kahvaltilik-corek-0cbf47e1-3ce5-4a07-9f5e-963046635a0a.jpg" alt=""></a>
+      <div class="caption">Kahvaltılık Çörek</div>
+      
+    </div>
+    <div class="slide">
+      <a href="mayasizPogaca.php"><img src="image/indexLezzetTrendleri/mayasızpogaca.jpeg" alt=""></a>
+      <div class="caption">Mayasız Kolay Poğaça</div>
+    </div>
+    <div class="slide">
+      <a href="zerzevatSalatasi.php"><img src="image/indexLezzetTrendleri/zerzevat-salatasi-262176c4-2553-4c3a-9878-f9a4e025c021.jpg" alt=""></a>
+      <div class="caption">Zerzevat Salatası</div>
+    </div>
+    <div class="slide">
+      <a href="patatesTarator.php"><img src="image/indexLezzetTrendleri/patates-tarator-d52414e0-5869-4e40-b2cd-e1d1afefdce7.jpg" alt=""></a>
+      <div class="caption">Patates Tarator</div>
+    </div>
+    <div class="slide">
+      <a href="caylikek.php"><img src="image/indexLezzetTrendleri/cayli-kek-tarifi-ac58a633-1fe2-4a72-b2c0-e6d04ed104b6.jpg" alt=""></a>
+      <div class="caption">Çaylı Kek Tarifi</div>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <button onclick="prevSlide()">‹</button>
+    <button onclick="nextSlide()">›</button>
+  </div>
+</div>
+        <h1 style="color: #c62828; text-align:center;">Lezzetli Yazarlar</h1>
+      <div class="yazarlar-slider-container" id="yazarlarSlider">
+  <div class="yazarlar-slider-track" id="yazarlarTrack">
+    <div class="yazar-slide">
+      <a href="sermetsever.php">
+        <img src="image/yazarlar/sermetseveroz.jpeg" alt="">
+        <p>Kurban Eti Yenir Mi? Sağlıklı Mı Zararlı Mı?</p>
+      </a>
+    </div>
+    <div class="yazar-slide">
+      <a href="lybarcelona.php">
+        <img src="image/yazarlar/Lazzarone-e1acef1c-f83b-4a5d-b452-0f1114e19599 (1).jpeg" alt="">
+        <p>Palamut Balığının Faydaları Nelerdir?</p>
+      </a>
+    </div>
+    <div class="yazar-slide">
+      <a href="limonlusoda.php">
+        <img src="image/yazarlar/cenkgirginol-e0724eca-5d71-4430-9e8e-4602267e9c56.jpeg" alt="">
+        <p>Limonlu Soda Faydaları Nelerdir?</p>
+      </a>
+    </div>
+    <div class="yazar-slide">
+      <a href="dvitamini.php">
+        <img src="image/yazarlar/Ayferyavi-4a3db47c-28bb-4715-854d-eeee373f355a.jpeg" alt="">
+        <p>D Vitamini Faydaları Nelerdir?</p>
+      </a>
+    </div>
+    <div class="yazar-slide">
+      <a href="salatalik.php">
+        <img src="image/yazarlar/HanseNurBuyukdag-469b0828-2914-46b8-b027-2e9c18cf66a0.jpeg" alt="">
+        <p>Salatalığın Hiç Duymadığınız 7 Faydası  </p>
+      </a>
+    
+    </div>
+  </div>
+
+  <div class="yazar-nav-buttons">
+    <button onclick="prevYazar()">‹</button>
+    <button onclick="nextYazar()">›</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      <?php
+        include "includes/footer.php";
+      ?>
+
+
+
+
+
+
+
+    </div>
+
+
+    <script>
+  const track = document.getElementById('sliderTrack');
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  function updateSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  }
+
+
+  //2.slider
+  let yazarIndex = 0;
+  const yazarTrack = document.getElementById('yazarlarTrack');
+  const yazarSlides = document.querySelectorAll('.yazar-slide');
+
+  function updateYazarSlider() {
+    yazarTrack.style.transform = `translateX(-${yazarIndex * 100}%)`;
+  }
+
+  function nextYazar() {
+    yazarIndex = (yazarIndex + 1) % yazarSlides.length;
+    updateYazarSlider();
+  }
+
+  function prevYazar() {
+    yazarIndex = (yazarIndex - 1 + yazarSlides.length) % yazarSlides.length;
+    updateYazarSlider();
+  }
+</script>
+</body>
+
+</html>
