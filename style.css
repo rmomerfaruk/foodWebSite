@@ -2,8 +2,13 @@ body{
     width: 90%;
     margin: auto;
    scroll-behavior:smooth;
+   
 }
 
+.container{
+    flex-direction: column !important;
+    
+}
 
 
 .navbar{
@@ -240,3 +245,16 @@ background-color: #E59A26;
     
 }
 
+.lezzetliHaberler{
+background-color: aquamarine;
+display: flex;
+
+}
+.lezzetliHaberler a{
+    text-decoration: none;
+    color: black;
+}
+.lezzetliHaberler img{
+    width: 200px;
+    height: 160px;
+}
